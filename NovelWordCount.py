@@ -6,7 +6,7 @@ def NovelRe(Novel):
     words = []
     pattern = r"(?<!')\b[a-zA-Z]{2}[a-zA-Z]+\b"
     tmp = re.findall(pattern, content)
-    DropList = ['you','don','mer','for','jul','its','his','with','elecbook','classics','charlotte','bront','aesop','fables','dickens','tale','and','the','that','was']
+    DropList = ['you','don','mer','for','jul','its','his','with','elecbook','charles','classics','charlotte','bront','aesop','fables','dickens','tale','and','the','that','was']
     for word in DropList:
         tmp = [x for x in tmp if x!=word]
     for x in tmp:
