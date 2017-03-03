@@ -2,13 +2,12 @@ import re
 from collections import Counter
 
 def NovelRe(Novel):
-    content = open(Novel, 'r').readlines()
+    content = open(Novel, 'r').read().lower()
     words = []
     pattern = r'\b[a-zA-Z]+\b'
-    for line in content:
-        tmp = re.findall(pattern, line)
-        for x in tmp:
-            words.append(x)
+    tmp = re.findall(pattern, content)
+    for x in tmp:
+        words.append(x)
     Count = Counter(words).most_common(100)
     return Count
 
