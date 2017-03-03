@@ -4,7 +4,7 @@ from collections import Counter
 def NovelRe(Novel):
     content = open(Novel, 'r').read().lower()
     words = []
-    pattern = r'\b[a-zA-Z]+\b'
+    pattern = r"(?<!')\b[a-zA-Z]+\b"
     tmp = re.findall(pattern, content)
     for x in tmp:
         words.append(x)
