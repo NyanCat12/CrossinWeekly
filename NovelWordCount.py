@@ -4,8 +4,11 @@ from collections import Counter
 def NovelRe(Novel):
     content = open(Novel, 'r').read().lower()
     words = []
-    pattern = r"(?<!')\b[a-zA-Z]+\b"
+    pattern = r"(?<!')\b[a-zA-Z]{2}[a-zA-Z]+\b"
     tmp = re.findall(pattern, content)
+    DropList = ['you','don','mer','for','jul','its','his']
+    for word in DropList:
+        tmp = [x for x in tmp if x!=word]
     for x in tmp:
         words.append(x)
     Count = Counter(words).most_common(100)
