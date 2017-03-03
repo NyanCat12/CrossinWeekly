@@ -69,4 +69,5 @@ def NovelVector():
     return NovelVectorDict
 
 if __name__ == '__main__':
+    Output()
     print (NovelVector())
