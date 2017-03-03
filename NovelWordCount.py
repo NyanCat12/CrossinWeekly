@@ -15,7 +15,7 @@ def NovelRe(Novel):
 def main():
     NovelList = ['a tale of two cities(双城记).txt', 'Aesop’s Fables(伊索寓言).txt', 'Jane Eyre(简·爱).txt', 'Oliver Twist(雾都孤儿(孤星血泪)).txt', 'Romeo and Juliet(罗蜜欧和朱丽叶).txt']
     for novel in NovelList:
-        print ('Novel: '+novel+'\n'+'========================================')
+        print (novel[:-4]+'\n'+'========================================')
         WordList = NovelRe(novel)
         i = 1
         for word in WordList:
