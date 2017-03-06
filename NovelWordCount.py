@@ -38,7 +38,7 @@ def Output():
             wordsum += word[1]
             
         for word in WordList:
-            print (str(i) + '.'+'\t' + str(word[0]) + '\t' + str(word[1]/wordsum))
+            print (str(i) + '.'+'\t' + str(word[0]) + '\t' + str('%.5f%%' %(word[1]/wordsum)))
             i += 1
         print ('\n')
 
