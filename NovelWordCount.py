@@ -16,19 +16,21 @@ def NovelRe(Novel):
         words.append(x)
     Count = Counter(words).most_common(100)
     return Count
-
+'''
+#用不上
 def WordListToWordDict(WordList):
     Dict = {}
     for word in WordList:
         Dict[word[0]] = word[1]
     return Dict
 
+#用不上
 def FullWordList(OldList, AddDict):
     for key in AddDict:
         OldList.append(key)
     NewList = list(set(OldList))
     return NewList
-
+'''
 def Output():
     NovelList = ['a tale of two cities(双城记).txt', 'Aesop’s Fables(伊索寓言).txt', 'Jane Eyre(简·爱).txt', 'Oliver Twist(雾都孤儿(孤星血泪)).txt', 'Romeo and Juliet(罗蜜欧和朱丽叶).txt']
     for novel in NovelList:
@@ -44,7 +46,8 @@ def Output():
             print (str(i) + '.'+'\t' + str(word[0]) + '\t' + str('%.5f%%' %(word[1]/wordsum)))
             i += 1
         print ('\n')
-
+'''
+#用不上
 def Freq(Dict):
     WordSum = 0
     for key in Dict:
@@ -53,6 +56,7 @@ def Freq(Dict):
         Dict[key] = Dict[key]/WordSum#只是前100的单词出现总次数，不是文章总数
     return Dict
 
+#用不上
 def Style():
     NovelList = ['a tale of two cities(双城记).txt', 'Aesop’s Fables(伊索寓言).txt', 'Jane Eyre(简·爱).txt', 'Oliver Twist(雾都孤儿(孤星血泪)).txt', 'Romeo and Juliet(罗蜜欧和朱丽叶).txt']
     Dict = {}
@@ -62,7 +66,8 @@ def Style():
     for key in Dict:
         WordList = FullWordList(WordList, Dict[key])
     return (WordList, Dict)
-        
+
+#用不上
 def WordVector(WordList, Dict):
     vector = [x*0 for x in range(len(WordList))]
     for index in range(len(WordList)):
@@ -72,6 +77,7 @@ def WordVector(WordList, Dict):
             vector[index] = 0
     return vector
 
+#用不上
 def NovelVector():
     WordList, Dict = Style()
     NovelVectorDict = {}
@@ -81,7 +87,7 @@ def NovelVector():
 
 def Plot():
     pass
-
+'''
 def OutputForWordCloud():
     NovelList = ['a tale of two cities(双城记).txt', 'Aesop’s Fables(伊索寓言).txt', 'Jane Eyre(简·爱).txt', 'Oliver Twist(雾都孤儿(孤星血泪)).txt', 'Romeo and Juliet(罗蜜欧和朱丽叶).txt']
     WordList = []
