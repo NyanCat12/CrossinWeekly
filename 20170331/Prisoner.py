@@ -22,7 +22,7 @@ def Update_behavior(strategy, behavior1, behavior2):
 def Step_result(behavior1, behavior2):
     return [-1*behavior1+4*behavior2-2*behavior1*behavior2+1, 4*behavior1-1*behavior2-2*behavior1*behavior2+1]
 
-def prisoner_delimma(N, strategy1, strategy2):
+def prisoner_dilemma(N, strategy1, strategy2):
     result = [0, 0]
     behavior = [Start_behavior(strategy1),Start_behavior(strategy2)]
     for step in range(N):
@@ -32,8 +32,8 @@ def prisoner_delimma(N, strategy1, strategy2):
     return (result[0], result[1])
 
 if __name__ == '__main__':
-    print (prisoner_delimma(4,'nice', 'nice'))
-    print (prisoner_delimma(5,'rat', 'rat'))
-    print (prisoner_delimma(6,'nice', 'rat'))
-    print (prisoner_delimma(4,'rat', 'tit_for_tat'))
-    print (prisoner_delimma(7,'tit_for_tat', 'tit_for_tat'))
+    print (prisoner_dilemma(4,'nice', 'nice'))
+    print (prisoner_dilemma(5,'rat', 'rat'))
+    print (prisoner_dilemma(6,'nice', 'rat'))
+    print (prisoner_dilemma(4,'rat', 'tit_for_tat'))
+    print (prisoner_dilemma(7,'tit_for_tat', 'tit_for_tat'))
