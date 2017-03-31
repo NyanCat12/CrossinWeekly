@@ -20,14 +20,7 @@ def Update_behavior(strategy, behavior1, behavior2):
         return 0
 
 def Step_result(behavior1, behavior2):
-    if [behavior1, behavior2] == [0,1]:
-        return [5,0]
-    elif [behavior1, behavior2] == [1,0]:
-        return [0,5]
-    elif [behavior1, behavior2] == [1,1]:
-        return [2,2]
-    elif [behavior1, behavior2] == [0,0]:
-        return [1,1]
+    return [-1*behavior1+4*behavior2-2*behavior1*behavior2+1, 4*behavior1-1*behavior2-2*behavior1*behavior2+1]
 
 def prisoner_delimma(N, strategy1, strategy2):
     result = [0, 0]
