@@ -18,7 +18,7 @@ def update_behavior(strategy, behavior1, behavior2):  # 根据自己的策略、
     elif strategy == 'rat':
         return 1
     elif strategy == 'tit_for_tat':
-        return behavior2
+        return behavior2  # 以牙还牙，选择对方上一轮的行为
     elif strategy == 'my_strategy':
         return 0  # 这里自定义自己的策略
 
