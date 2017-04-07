@@ -4,10 +4,10 @@
 def pingpong(n, k=7, label=1):
     pingpong_list = [1]
     try:
-        for i in range(1, n):
+        for i in range(1, n+1):  # 和下面的打印数组倒数第二个数一起，可以处理负数和0的输入
             label *= (i % k == 0 or str(k) in str(i))*-2+1
             pingpong_list.append(pingpong_list[-1] + label)
-        print(pingpong_list[-1])
+        print(pingpong_list[-2])
     except:
         print('input error')
     return 0
